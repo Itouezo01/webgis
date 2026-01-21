@@ -4,83 +4,132 @@
     <meta charset="UTF-8">
     <title>Landing Page SIG QGIS</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f2f4f7;
-            color: #333;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap');
 
-        header {
-            background: #668aee;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top, #0b1020, #050711);
+    color: #e6e8ff;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #4f7cff, #7a3cff);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(79,124,255,0.5);
+}
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+header h1 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
+header p {
+    opacity: 0.85;
+}
 
-        h2 {
-            color: #1f4fd8;
-            border-bottom: 3px solid #1f4fd8;
-            padding-bottom: 6px;
-        }
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
 
-        p {
-            line-height: 1.7;
-            text-align: justify;
-        }
+/* ===== CARD ===== */
+.card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 35px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 60px rgba(0,0,0,0.6);
+}
 
-        .preview {
-            text-align: center;
-            margin-top: 20px;
-        }
+/* ===== TITLE ===== */
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #6cf3ff;
+    border-left: 4px solid #6cf3ff;
+    padding-left: 12px;
+}
 
-        .preview img {
-            max-width: 100%;
-            border-radius: 10px;
-            border: 2px solid #ddd;
-        }
+/* ===== TEXT ===== */
+p {
+    line-height: 1.8;
+    color: #cfd3ff;
+    text-align: justify;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 26px;
-            background: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-        }
+/* ===== PREVIEW ===== */
+.preview {
+    text-align: center;
+    margin-top: 30px;
+}
 
-        .btn:hover {
-            background: #218838;
-        }
+.preview img {
+    max-width: 100%;
+    border-radius: 14px;
+    border: 1px solid rgba(108,243,255,0.5);
+    box-shadow: 0 0 40px rgba(108,243,255,0.3);
+}
 
-        footer {
-            text-align: center;
-            margin: 40px 0 20px;
-            color: #666;
-            font-size: 14px;
-        }
-    </style>
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #00f2ff, #5b7cff);
+    color: #050711;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px rgba(0,242,255,0.7);
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0,242,255,1);
+}
+
+/* ===== FEATURE LIST ===== */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.feature {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #aab0ff;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer span {
+    color: #6cf3ff;
+}
+</style>
+
 </head>
 <body>
 
@@ -89,32 +138,46 @@
     <p>Kecamatan Kedungkandang · Berbasis QGIS</p>
 </header>
 
-<div class="container">
+<div class="container"> 
     <div class="card">
 
-        <h2>Abstrak</h2>
-        <p>
-            Sistem Informasi Geografis ini menyajikan peta tematik persebaran
-            warung internet (warnet) di Kecamatan Kedungkandang berdasarkan
-            data hasil pengumpulan dan pengolahan data tahun 2024/2025.
-            Data spasial diolah menggunakan perangkat lunak QGIS dan
-            disajikan dalam bentuk WebGIS agar dapat diakses secara
-            interaktif melalui web.
-        </p>
-
-        <h2>Preview Peta</h2>
-
-        <div class="preview">
-            <img src="assets/kotamalang.png" alt="Preview Peta SIG">
+        <section>
+            <h2>Latar Belakang</h2>
             <p>
-                Preview statis peta hasil pengolahan QGIS.
-                Klik tombol di bawah untuk membuka peta interaktif.
+                Sistem Informasi Geografis ini menyajikan peta tematik persebaran
+                warung internet (warnet) di Kecamatan Kedungkandang berdasarkan
+                data hasil pengumpulan dan pengolahan data tahun 2024/2025.
+                Data spasial diolah menggunakan perangkat lunak QGIS dan
+                disajikan dalam bentuk WebGIS agar dapat diakses secara
+                interaktif melalui web.
             </p>
+        </section>
 
-            <a href="webgisnya/index.html" class="btn">
-                Buka WebGIS
-            </a>
-        </div>
+        </section>
+
+        <section>
+            <h2>Preview Peta</h2>
+            <div class="preview">
+                <img src="assets/kotamalang.png" alt="Preview Peta SIG">
+                <p>
+                    Preview statis peta hasil pengolahan QGIS.
+                    Klik tombol di bawah untuk membuka peta interaktif.
+                </p>
+                <a href="webgisnya/index.html" class="btn">
+                    Buka WebGIS
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Penyusun</h2>
+            <div class="author">
+                <p><strong>Nama:</strong> VIto Eko Lesmana Putra</p>
+                <p><strong>Instansi:</strong> Institut Asia Malang</p>
+                <p><strong>Tahun:</strong> 2026</p>
+                <p><strong>Perangkat:</strong> QGIS</p>
+            </div>
+        </section>
 
     </div>
 </div>
