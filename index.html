@@ -128,6 +128,36 @@ footer {
 footer span {
     color: #6cf3ff;
 }
+
+webgis-frame {
+    margin-top: 40px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(108,243,255,0.4);
+    box-shadow: 0 0 50px rgba(108,243,255,0.35);
+    position: relative;
+}
+
+.webgis-frame iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+/* Label kecil di pojok */
+.webgis-label {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    background: rgba(0,0,0,0.6);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #6cf3ff;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    z-index: 2;
+}
 </style>
 
 </head>
@@ -159,15 +189,24 @@ footer span {
             <h2>Preview Peta</h2>
             <div class="preview">
                 <img src="assets/kotamalang.png" alt="Preview Peta SIG">
-                <p>
-                    Preview statis peta hasil pengolahan QGIS.
-                    Klik tombol di bawah untuk membuka peta interaktif.
-                </p>
+            </div>
+
+            <h2>Peta Interaktif WebGIS</h2>
+            <div class="webgis-frame">
+                <div class="webgis-label">LIVE WEBGIS</div>
+
+                <iframe 
+                    src="webgisnya/index.html"
+                    loading="lazy"
+                    title="Peta Interaktif SIG Warnet Kecamatan Kedungkandang">
+                </iframe>
                 <a href="webgisnya/index.html" class="btn">
-                    Buka WebGIS
+                Buka WebGIS
                 </a>
             </div>
+
         </section>
+        
 
         <section>
             <h2>Penyusun</h2>
