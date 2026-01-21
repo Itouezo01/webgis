@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page SIG QGIS</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f2f4f7;
+            color: #333;
+        }
+
+        header {
+            background: #668aee;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1f4fd8;
+            border-bottom: 3px solid #1f4fd8;
+            padding-bottom: 6px;
+        }
+
+        p {
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .preview {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .preview img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 26px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #218838;
+        }
+
+        footer {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Peta Tematik Persebaran Warnet</h1>
+    <p>Kecamatan Kedungkandang · Berbasis QGIS</p>
+</header>
+
+<div class="container">
+    <div class="card">
+
+        <h2>Abstrak</h2>
+        <p>
+            Sistem Informasi Geografis ini menyajikan peta tematik persebaran
+            warung internet (warnet) di Kecamatan Kedungkandang berdasarkan
+            data hasil pengumpulan dan pengolahan data tahun 2024/2025.
+            Data spasial diolah menggunakan perangkat lunak QGIS dan
+            disajikan dalam bentuk WebGIS agar dapat diakses secara
+            interaktif melalui web.
+        </p>
+
+        <h2>Preview Peta</h2>
+
+        <div class="preview">
+            <img src="assets/kotamalang.png" alt="Preview Peta SIG">
+            <p>
+                Preview statis peta hasil pengolahan QGIS.
+                Klik tombol di bawah untuk membuka peta interaktif.
+            </p>
+
+            <a href="webgisnya/index.html" class="btn">
+                Buka WebGIS
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 · Sistem Informasi Geografis · QGIS
+</footer>
+
+</body>
+</html>
